@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Converter With jQuery</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="jumbotron text-center">
+      <h1>Text Converter Using jQuery</h1>
+      <p>A simple app to convert the text into desired output.</p> 
+    </div>
+      
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="text-center">Enter Your Text Below</h3>
+          <div class="form-group">
+            <textarea id="textArea" class="form-control" placeholder="Enter Your Text Here...." rows="10"></textarea>
+          </div>
+        </div>
+    </div>
+       <button id="sentenceCase" class="btn btn-success">Sentence Case</button>
+       <button id="lowerCase" class="btn btn-success">Lowercase</button>
+       <button id="upperCase" class="btn btn-success">Uppercase</button>
+       <button id="inverseCase" class="btn btn-success">Inverse Case</button>
+       <button id="alternatingCase" class="btn btn-success">Alternating Case</button>
+       <button id="clearCase" class="btn btn-success">Clear</button>
+       <p>Character Count <span id="char_count" class="badge">0</span> Word Count <span id="word_count" class="badge">0</span></p>
+    </div>
+
+    
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
