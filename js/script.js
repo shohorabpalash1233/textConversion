@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#textArea").keyup(function() {
-        var text = $(this).val();
+        var text = $(this).text();
 
         // Words Count
         var numberOfWord = 0;
@@ -19,11 +19,29 @@ $(document).ready(function(){
     });
 
     $("#upperCase").click(function() {
-        $("#textArea").val(($("#textArea").val()).toUpperCase());
-        str = $
+        $("#textArea").text(($("#textArea").text()).toUpperCase());
     });
 
     $("#lowerCase").click(function() {
-        $("#textArea").val(($("#textArea").val()).toLowerCase());
+        $("#textArea").text(($("#textArea").text()).toLowerCase());
+    });
+
+    $("#clearCase").click(function() {
+        $("#textArea").text("");
+        $("#word_count").html("0");
+        $("#char_count").html("0");
+    });
+
+    $("#sentenceCase").click(function(){
+        var str = $('#textArea').text();
+        $('#textArea').text(str.charAt(0).toUpperCase() + str.substr(1).toLowerCase());
+    });
+
+    $("#titleCase").click(function() {
+        var str = $('#textArea').text();
+        new_str = str.toLowerCase().replace(/\b[a-z]/g, function(txtVal) {
+            return txtVal.toUpperCase();
+        });
+        $('#textArea').text(new_str);
     });
 });
